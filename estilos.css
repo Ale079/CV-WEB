@@ -45,6 +45,10 @@ html {
   will-change: transform;
 }
 
+.opciones .ancho {
+    max-width: 100%;
+}
+
 .opciones--hidden {
     transform: translateY(-150px);
 }
@@ -70,7 +74,7 @@ html {
   color: white;
   padding-top: 250px;
   padding-bottom: 150px;
-  font-size: 90px;
+  font-size: 40px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   animation: fadeInDown 1s ease-out;
 }
@@ -306,7 +310,7 @@ html {
 }
 
 .contacto img{
-  width: 150px;
+  width: 100px;
 }
 
 .redes_sociales{
@@ -333,47 +337,34 @@ html {
   transform: translateY(-5px);
 }
 
-/* --- INICIA CÓDIGO RESPONSIVO --- */
 
-/* Estas reglas se aplicarán a cualquier pantalla 
-   que mida 768px de ancho o menos (tablets y celulares) */
 @media (max-width: 768px) {
 
-    /* 1. AJUSTES DE ESPACIADO GENERAL */
-    
-    /* Reducimos los márgenes superiores de todas las secciones */
     .resumen_contenedor,
     .habilidades,
     .experiencia_contenedor {
         margin-top: 60px;
     }
 
-    /* Reducimos el padding superior de la sección de contacto/proyectos */
     .contacto_contenedor {
         padding-top: 100px;
         margin-bottom: 60px;
     }
 
-    /* 2. BARRA DE NAVEGACIÓN */
     
-    /* Hacemos los enlaces un poco más pequeños para que quepan */
     .opciones a {
         padding: 8px 10px;
         margin-right: 8px;
         font-size: 14px;
     }
 
-    /* 3. SECCIÓN PRINCIPAL (HERO) */
     
     .principal h1 {
-        font-size: 32px; /* Hacemos el título más pequeño */
-        padding-top: 180px;  /* Menos espacio (dejando para la navbar) */
-        padding-bottom: 100px; /* Menos espacio */
+        font-size: 32px;
+        padding-top: 180px; 
+        padding-bottom: 100px; 
     }
 
-    /* 4. TÍTULOS DE SECCIÓN (h2) */
-    
-    /* Reducimos el tamaño de todos los títulos de sección */
     .resumen_contenedor h2,
     .habilidades h2,
     .experiencia_contenedor h2,
@@ -381,34 +372,34 @@ html {
         font-size: 30px;
         margin-bottom: 30px;
     }
-
-    /* 5. CONTENEDORES FLEX (La parte más importante) */
     
-    /* Hacemos que el texto y la imagen se apilen verticalmente */
     .resumen_contenedor_cuerpo {
         flex-direction: column;
     }
 
-    /* Hacemos que las tarjetas de habilidades se apilen verticalmente */
     .habilidades_dual {
         flex-direction: column;
-        align-items: center; /* Las centramos ahora que están apiladas */
+        align-items: center; 
     }
-
-    /* 6. ICONOS DE HABILIDADES */
     
-    /* Hacemos los 4 iconos de tecnologías más pequeños */
     .habilidades img {
-        width: 100px; /* Antes: 200px */
+        width: 90px; 
         padding: 15px;
     }
 
-    /* 7. TARJETAS DE HABILIDADES */
-    
-    /* Quitamos un margen que sobraba en la tarjeta */
     .habilidades_blandas {
         margin-right: 0;
     }
+
+    .redes_sociales {
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 20px; 
+    }
+
+    .contacto img {
+        width: 60px; 
+    }
 }
-/* --- FIN CÓDIGO RESPONSIVO --- */
+
 
