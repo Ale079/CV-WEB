@@ -333,4 +333,82 @@ html {
   transform: translateY(-5px);
 }
 
+/* --- INICIA CÓDIGO RESPONSIVO --- */
+
+/* Estas reglas se aplicarán a cualquier pantalla 
+   que mida 768px de ancho o menos (tablets y celulares) */
+@media (max-width: 768px) {
+
+    /* 1. AJUSTES DE ESPACIADO GENERAL */
+    
+    /* Reducimos los márgenes superiores de todas las secciones */
+    .resumen_contenedor,
+    .habilidades,
+    .experiencia_contenedor {
+        margin-top: 60px;
+    }
+
+    /* Reducimos el padding superior de la sección de contacto/proyectos */
+    .contacto_contenedor {
+        padding-top: 100px;
+        margin-bottom: 60px;
+    }
+
+    /* 2. BARRA DE NAVEGACIÓN */
+    
+    /* Hacemos los enlaces un poco más pequeños para que quepan */
+    .opciones a {
+        padding: 8px 10px;
+        margin-right: 8px;
+        font-size: 14px;
+    }
+
+    /* 3. SECCIÓN PRINCIPAL (HERO) */
+    
+    .principal h1 {
+        font-size: 32px; /* Hacemos el título más pequeño */
+        padding-top: 180px;  /* Menos espacio (dejando para la navbar) */
+        padding-bottom: 100px; /* Menos espacio */
+    }
+
+    /* 4. TÍTULOS DE SECCIÓN (h2) */
+    
+    /* Reducimos el tamaño de todos los títulos de sección */
+    .resumen_contenedor h2,
+    .habilidades h2,
+    .experiencia_contenedor h2,
+    .contacto_contenedor h2 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    /* 5. CONTENEDORES FLEX (La parte más importante) */
+    
+    /* Hacemos que el texto y la imagen se apilen verticalmente */
+    .resumen_contenedor_cuerpo {
+        flex-direction: column;
+    }
+
+    /* Hacemos que las tarjetas de habilidades se apilen verticalmente */
+    .habilidades_dual {
+        flex-direction: column;
+        align-items: center; /* Las centramos ahora que están apiladas */
+    }
+
+    /* 6. ICONOS DE HABILIDADES */
+    
+    /* Hacemos los 4 iconos de tecnologías más pequeños */
+    .habilidades img {
+        width: 100px; /* Antes: 200px */
+        padding: 15px;
+    }
+
+    /* 7. TARJETAS DE HABILIDADES */
+    
+    /* Quitamos un margen que sobraba en la tarjeta */
+    .habilidades_blandas {
+        margin-right: 0;
+    }
+}
+/* --- FIN CÓDIGO RESPONSIVO --- */
 
